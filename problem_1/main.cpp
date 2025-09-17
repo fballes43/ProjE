@@ -2,7 +2,6 @@
 #include <set>
 #include <string>
 #include <vector>
-#include "funcs.h"
 using namespace std;
 
 
@@ -13,6 +12,58 @@ using namespace std;
 //less than x which is the
 //only command line arg
 
+void print_banner(){
+  
+  cout<<"****************************"<<endl;
+  cout<<"**    Hey, Handsome ;)    **"<<endl;
+  cout<<"****************************"<<endl;
+
+}
+
+
+vector<int> multiplesVec(int max, int mult){
+  cout<<endl;
+  printf("Finding Multiples of %i up less than %i\n",mult, max);
+  
+  vector<int> multList;
+
+  int curVal = 0;
+  if(mult < max){
+
+    multList.push_back(mult);
+    curVal += mult;
+    
+  }
+
+  while(curVal < max){
+    int nextNum = curVal + mult;
+    if (nextNum < max){
+    multList.push_back(nextNum);
+    curVal += mult;
+    }
+    else {
+      break;
+    }
+  }
+
+  /*
+  for(auto i: multList)
+    cout << i << " ";
+
+  cout<<endl;
+  */
+  return multList;
+} 
+
+int sumFinder(set<int> multiSet){
+  int finalAnswer = 0;
+
+  for(set<int>::iterator it = multiSet.begin(); it != multiSet.end(); ++it){
+    finalAnswer += *it;
+  } 
+
+  return finalAnswer;
+}
 
 int main(int argc, char* argv[]) {
 
@@ -39,15 +90,8 @@ int main(int argc, char* argv[]) {
     combinedSet.insert(fiveX[i]);
   }
   
-  /*
-  cout<<"Final Set"<<endl;
-  set<int>::iterator it;
-  for (it=combinedSet.begin(); it!=combinedSet.end(); ++it)
-    std::cout << ' ' << *it;
-  std::cout << '\n';
-  */
   int answer = sumFinder(combinedSet);
   printf("\nThe answer you seek  for the mulitples of 3 and 5 less than %i is %i\n", upperBound,answer);
 
-    return 0;
+  return 0;
 }
