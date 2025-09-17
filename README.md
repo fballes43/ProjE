@@ -9,13 +9,7 @@ The goal of this repository is to:
 - Showcase my **programming skills**.
 - Demonstrate my **problem-solving abilities**.
 - Serve as a **personal portfolio** for coding practice.
-
-## Goals and Skills Development
-
 - Maintain and sharpen my **C++ programming skills** through personal and portfolio projects.  
-- Explore **financial and data analysis projects**, starting with free historical stock/economic datasets.  
-- Develop small tools and algorithms to process, analyze, and visualize financial data.
-
 
 ## About Project Euler Problems
 
