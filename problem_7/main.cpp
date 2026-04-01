@@ -8,7 +8,9 @@ using namespace std;
 //prime
 
 
+
+
 int main () {
-  
+  cout<<" I have no idea how to fix this"<<endl;  
   return 0;
 }
